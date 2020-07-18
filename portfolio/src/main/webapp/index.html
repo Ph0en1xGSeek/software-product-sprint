@@ -2,21 +2,26 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Ph0en1x</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <body>
+  <body onload=getCommentList()>
     <div id="content">
-      <h1>Guosheng's Portfolio</h1>
-      <p>My name is Guosheng Pan and I'm from NJU!</p>
-      <p>My <a href="https://github.com/Ph0en1xGSeek">Github</a></p>
-      <p>My <a href="https://ph0en1xgseek.github.io/">Blog</a></p>
-      <p>My <a href="https://www.zhihu.com/people/pan-guo-sheng-50">Zhihu</a></p>
-      <img src="images/panda.jpg"/>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+        <h1>Guosheng's Portfolio</h1>
+        <p>My name is Guosheng Pan and I'm from NJU!</p>
+        <p>My <a href="https://github.com/Ph0en1xGSeek">Github</a></p>
+        <p>My <a href="https://ph0en1xgseek.github.io/">Blog</a></p>
+        <p>My <a href="https://www.zhihu.com/people/pan-guo-sheng-50">Zhihu</a></p>
+        <img src="images/panda.jpg"/>
+
+        <form action="/data" method="POST">
+            <p>Please input your comment:</p>
+            <textarea name="comment-text" rows="5" cols="100" placeholder="I want to say..."></textarea>
+
+            <input type="submit" />
+        </form>
+        <div id="comment-container"></div>
     </div>
   </body>
 </html>
